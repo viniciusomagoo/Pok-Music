@@ -1,0 +1,45 @@
+{
+  "name": "discord-music-bot",
+  "version": "1.0.0",
+  "description": "Bot de música Pokémon/Undertale para Discord com suporte a YouTube, Spotify, Deezer e YouTube Music",
+  "main": "dist/bot.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/bot.js",
+    "dev": "ts-node bot.ts",
+    "register-commands": "node dist/register-commands.js",
+    "setup": "npm install && npm install sodium-native && npm run build"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "music",
+    "pokemon",
+    "undertale",
+    "youtube",
+    "spotify"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@discordjs/voice": "^1.0.0", 
+    "discord.js": "^14.25.0",
+    "dotenv": "^16.6.1",
+    "ffmpeg-static": "^5.2.0",
+    "libsodium-wrappers": "^0.7.15",
+    "opusscript": "^0.1.1",
+    "safe-buffer": "^5.2.1",
+    "ytdl-core": "^4.11.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "overrides": {
+    "@discordjs/opus": "0.0.0"
+  }
+}
